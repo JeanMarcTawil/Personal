@@ -726,10 +726,11 @@ textarea {
 }
 
 @media screen and (max-width: 800px) {
-    .about-title{
+    .about-title {
         font-size: 30px !important;
     }
-    .about-text{
+
+    .about-text {
         font-size: 20px !important;
     }
 }
@@ -801,10 +802,11 @@ textarea {
 }
 
 @media screen and (max-width: 1100px) {
-    .page-title-container{
+    .page-title-container {
         margin: 0 0 30px 0 !important;
     }
 }
+
 @media screen and (max-width: 1000px) {
     .page-title-container p {
         font-size: 2.2rem !important;
@@ -816,24 +818,25 @@ textarea {
 }
 
 @media screen and (max-width: 800px) {
-    .congregation-container{
+    .congregation-container {
         padding: 0 !important;
     }
 
-    .congregationTitle{
+    .congregationTitle {
         font-size: 20px !important;
     }
 }
 
 @media screen and (max-width: 600px) {
-    .congregationContent{
+    .congregationContent {
         padding: 15px 10px !important;
     }
 
-    .page-title-container p{
+    .page-title-container p {
         font-size: 2rem !important;
     }
 }
+
 .page-title-container p {
     font-size: 3rem;
     color: #A50213;
@@ -950,7 +953,7 @@ textarea {
     width: 100%;
     max-width: 900px;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
     padding: 25px;
 }
 
@@ -1036,7 +1039,7 @@ textarea {
 .self-details {
     width: 100%;
     height: auto;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
     border-radius: 6px;
     padding: 10px;
     box-sizing: border-box;
@@ -1051,7 +1054,8 @@ textarea {
 
 /* Filter Section */
 .filter-section {
-    display: flex; /* Ensures it stays visible on large screens */
+    display: flex;
+    /* Ensures it stays visible on large screens */
     justify-content: space-between;
     align-items: center;
     background: white;
@@ -1074,11 +1078,14 @@ textarea {
     background: #A50213;
     color: white;
     border: none;
-    padding: 8px 12px; /* Reduced padding */
+    padding: 8px 12px;
+    /* Reduced padding */
     border-radius: 5px;
     cursor: pointer;
-    font-size: 14px; /* Reduced font size */
-    min-width: 80px; /* Ensures uniform button size */
+    font-size: 14px;
+    /* Reduced font size */
+    min-width: 80px;
+    /* Ensures uniform button size */
 }
 
 .filter-btn:hover {
@@ -1135,7 +1142,8 @@ textarea {
 }
 
 .search-dropdown-btn {
-    display: none; /* Hidden by default, only shown on mobile */
+    display: none;
+    /* Hidden by default, only shown on mobile */
     padding: 8px 14px;
     background: #A50213;
     color: white;
@@ -1242,6 +1250,7 @@ textarea {
 
 /* Mobile View */
 @media (max-width: 768px) {
+
     /* Hide filter section by default */
     .filter-section {
         display: none;
@@ -1266,7 +1275,8 @@ textarea {
         align-items: center;
     }
 
-    .filter-input, .filter-btn {
+    .filter-input,
+    .filter-btn {
         width: 100%;
     }
 
@@ -1423,14 +1433,14 @@ textarea {
 }
 
 @media screen and (max-width: 1050px) {
-    .container-imageSlider2{
+    .container-imageSlider2 {
         padding: 20px !important;
         box-sizing: border-box;
     }
 }
 
 @media screen and (max-width: 850px) {
-    .container-imageSlider2{
+    .container-imageSlider2 {
         padding: 10px !important;
         box-sizing: border-box;
     }
@@ -1509,7 +1519,9 @@ textarea {
 }
 
 @media screen and (max-width: 800px) {
-    .contact-container a, li{
+
+    .contact-container a,
+    li {
         font-size: 16px !important;
     }
 
