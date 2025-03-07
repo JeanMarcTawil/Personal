@@ -83,3 +83,26 @@ document.addEventListener("DOMContentLoaded", function () {
     // Listen for window resize events
     window.addEventListener("resize", updateLogo);
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const searchBtn = document.querySelector(".search-dropdown-btn");
+    const filterSection = document.querySelector(".filter-section");
+
+    const toggleFilterSection = () => {
+        if (window.innerWidth <= 768) {
+            filterSection.style.display = filterSection.style.display === "block" ? "none" : "block";
+        }
+    };
+
+    searchBtn.addEventListener("click", toggleFilterSection);
+
+    window.addEventListener("resize", () => {
+        if (window.innerWidth > 768) {
+            filterSection.style.display = "flex"; // Always show on larger screens
+        } else if (filterSection.style.display !== "block") {
+            filterSection.style.display = "none"; // Hide if not open
+        }
+    });
+});
+
