@@ -71,28 +71,37 @@
 
     <section class="priests-section">
         <div class="container">
+    
+            <!-- Category Toggle Above Search -->
+            <div class="category-toggle">
+                <button class="toggle-btn active" data-category="alive">الأحياء</button>
+                <button class="toggle-btn" data-category="deceased">الراقدون</button>
+            </div>
+    
+            <!-- Search Dropdown Button (Only Visible on Mobile) -->
+            <button class="search-dropdown-btn">إظهار البحث</button>
+    
+            <!-- Search & Filter Section (Hidden by Default on Mobile) -->
             <div class="filter-section">
                 <div class="filter-group">
-                    <button class="filter-btn search-btn">بحث <i class="fa fa-search"></i></button>
                     <input type="text" placeholder="الاسم" class="filter-input">
                     <input type="text" placeholder="الشهرة" class="filter-input">
+                </div>
+                <div class="filter-buttons">
+                    <button class="filter-btn search-btn">بحث <i class="fa fa-search"></i></button>
                     <button class="filter-btn clear-btn">مسح <i class="fa fa-times"></i></button>
                 </div>
-                <div class="category-toggle">
-                    <button class="toggle-btn active" data-category="alive">الأحياء</button>
-                    <button class="toggle-btn" data-category="deceased">الراقدون</button>
-                </div>
             </div>
-
+    
+            <!-- Sorting Buttons (Kept as in Original) -->
             <div class="filter-buttons">
                 <button class="filter-btn active" data-sort="name">الاسم</button>
                 <button class="filter-btn" data-sort="first-vows">تاريخ النذور الأول</button>
                 <button class="filter-btn" data-sort="birth-date">تاريخ الولادة</button>
                 <button class="filter-btn" data-sort="ordination-date">تاريخ السيامة الكهنوتية</button>
             </div>
-
-
-
+    
+            <!-- Priests Grid -->
             <div class="priests-grid">
                 <div class="priest-card">
                     <img src="Images/generalSuperior.jpg" alt="مارون مبارك" class="priest-img">
@@ -101,11 +110,12 @@
                     </div>
                 </div>
             </div>
-
+    
             <button class="load-more-btn">عرض المزيد</button>
+    
         </div>
     </section>
-
+    
 
 
 
