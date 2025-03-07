@@ -15,95 +15,119 @@
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
     <style>
-        
-.containerr {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-}
+        .containerr {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
 
-.card {
-    background-color: white;
-    border-radius: 15px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 25px;
-    max-width: 900px;
-    width: 100%;
-    text-align: right;
-}
+        .card {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            max-width: 900px;
+            width: 100%;
+            text-align: right;
+        }
 
-.card .header {
-    text-align: center;
-    margin-bottom: 20px;
-}
+        .card .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
 
-.card h1 {
-    font-size: 26px;
-    color: #A50213;
-}
+        .card h1 {
+            font-size: 26px;
+            color: #A50213;
+        }
 
-.image-section {
-    text-align: center;
-    margin-bottom: 20px;
-}
+        .image-section {
+            text-align: center;
+            margin-bottom: 20px;
+        }
 
-.image-section img {
-    width: 250px;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 3px solid #822c2c;
-}
+        .image-section img {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid #822c2c;
+        }
 
-.details-section {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
+        .details-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
 
-.details-section .detail {
-    flex: 1 1 calc(50% - 20px);
-    background: #f4f4f4;
-    padding: 15px;
-    border-radius: 8px;
-    text-align: right;
-}
+        .details-section .detail {
+            flex: 1 1 calc(50% - 20px);
+            background: #f4f4f4;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: right;
+            box-sizing: border-box;
+        }
 
-.details-section h3 {
-    font-size: 18px;
-    color: #555;
-}
+        .specific-height {
+            max-height: 80px;
+        }
 
-.details-section p {
-    font-size: 16px;
-    font-weight: 500;
-    color: #333;
-}
+        .details-section h3 {
+            font-size: 18px;
+            color: #555;
+        }
 
-.self-details {
-    background: #eee;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    margin-top: 20px;
-}
+        .details-section p {
+            font-size: 16px;
+            font-weight: 500;
+            color: #333;
+        }
 
-.self-details p {
-    font-size: 18px;
-    line-height: 1.8;
-}
+        .self-details {
+            background: #eee;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 20px;
+        }
 
-@media (max-width: 768px) {
-    .details-section {
-        flex-direction: column;
-    }
+        .self-details p {
+            font-size: 18px;
+            line-height: 1.8;
+        }
 
-    .details-section .detail {
-        flex: 1 1 100%;
-    }
-}
 
+        @media (max-width: 768px) {
+            .details-section {
+                flex-direction: column;
+            }
+
+            .details-section-content {
+                gap: 0;
+            }
+
+            .details-section .detail {
+                flex: 1 1 100%;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .containerr {
+                padding: 0;
+            }
+
+            .card {
+                padding: 5px 25px !important;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .card {
+                padding: 5px 15px !important;
+            }
+        }
     </style>
 </head>
 
@@ -136,8 +160,8 @@
             <a href="#">رياضات ومواعظ</a>
         </div>
 
-        
-        
+
+
     </nav>
 
     <div class="side-nav" id="sideNav">
@@ -153,8 +177,10 @@
         </ul>
         <div class="nav-social-media">
             <a href="https://wa.me/9613937983" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-            <a href="https://www.instagram.com/kreimist?igsh=a205aHhjbTJtNGRt" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://www.facebook.com/share/1JCS9UiMUS/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/kreimist?igsh=a205aHhjbTJtNGRt" target="_blank"><i
+                    class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/share/1JCS9UiMUS/" target="_blank"><i
+                    class="fa-brands fa-facebook-f"></i></a>
         </div>
     </div>
 
@@ -173,69 +199,69 @@
                 <div class="details-section">
                     <div class="details-section-content">
                         <div class="section-content">
-                            <div class="detail">
+                            <div class="detail specific-height">
                                 <h3>الإسم:</h3>
                                 <p>مارون</p>
                             </div>
-                            <div class="detail">
+                            <div class="detail specific-height">
                                 <h3>الشهرة:</h3>
                                 <p>مبارك</p>
                             </div>
-                            <div class="detail">
+                            <div class="detail specific-height">
                                 <h3>إسم الأب:</h3>
                                 <p>بطرس</p>
                             </div>
-                            <div class="detail">
+                            <div class="detail specific-height">
                                 <h3>إسم الأم وشهرتها:</h3>
                                 <p>جورجيت فاضل</p>
                             </div>
-                            <div class="detail">
+                            <div class="detail specific-height">
                                 <h3>تاريخ الولادة:</h3>
                                 <p>11/02/1964</p>
                             </div>
-                            <div class="detail">
+                            <div class="detail specific-height">
                                 <h3>مكان الولادة:</h3>
                                 <p>بقعاتة كنعان</p>
                             </div>
-                            <div class="detail">
+                            <div class="detail specific-height">
                                 <h3>الدروس الثانوية:</h3>
                                 <p>علوم الإنسانية والأدب</p>
                             </div>
-                            <div class="detail">
+                            <div class="detail specific-height">
                                 <h3>إسم المدرسة:</h3>
                                 <p>معهد الرسل جونية</p>
                             </div>
                         </div>
                         <div class="section-content">
-                            <div class="detail">
+                            <div class="detail specific-height">
                                 <h3>الدروس الفلسفية واللاهوتية:</h3>
                                 <p>جامعة الروح القدس - الكسليك</p>
                             </div>
-                            <div class="detail">
+                            <div class="detail specific-height">
                                 <h3>تاريخ النذور الأولى:</h3>
                                 <p>26/09/1982</p>
                             </div>
-                            <div class="detail">
+                            <div class="detail specific-height">
                                 <h3>تاريخ النذور المؤبدة:</h3>
                                 <p>26/09/1986</p>
                             </div>
-                            <div class="detail">
+                            <div class="detail specific-height">
                                 <h3>تاريخ السيامة الشدياقية:</h3>
                                 <p>10/1988</p>
                             </div>
-                            <div class="detail">
+                            <div class="detail specific-height">
                                 <h3>تاريخ السيامة الشماسية:</h3>
                                 <p>05/1988</p>
                             </div>
-                            <div class="detail">
+                            <div class="detail specific-height">
                                 <h3>تاريخ السيامة الكهنوتية:</h3>
                                 <p>10/07/1988</p>
                             </div>
-                            <div class="detail">
+                            <div class="detail specific-height">
                                 <h3>مكان السيامة الكهنوتية:</h3>
                                 <p>معهد الرسل جونية</p>
                             </div>
-                            <div class="detail">
+                            <div class="detail specific-height">
                                 <h3>تاريخ السيامة الأسقفية:</h3>
                                 <p>—</p>
                             </div>
