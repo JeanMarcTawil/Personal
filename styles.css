@@ -239,9 +239,7 @@ nav {
     transition: transform 0.3s ease-in-out;
 }
 
-.nav-social-media a:hover {
-    transform: scale(1.2);
-}
+
 
 /* Overlay Background */
 .overlay {
@@ -482,9 +480,7 @@ textarea {
     object-fit: contain;
 }
 
-.footer-social .social-icon:hover {
-    color: #A50213;
-}
+
 
 .footer-content {
     display: flex;
