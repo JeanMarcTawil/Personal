@@ -90,7 +90,7 @@ header {
 nav {
     width: 100%;
     background-color: #fff;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
     padding: 15px 20px;
     position: relative;
 }
@@ -355,7 +355,7 @@ body.no-scroll {
 .slick-next {
     display: block !important;
     /* Ensure arrows are visible */
-    z-index: 1000;
+    z-index: 50;
     /* Make sure arrows appear above images */
     width: 50px;
     height: 50px;
@@ -466,7 +466,7 @@ textarea {
 
 .footer-social .social-icon {
     color: #A50213;
-    font-size: 24px;
+    font-size: 26px;
     margin: 0 10px;
     transition: 0.3s;
 }
@@ -605,10 +605,17 @@ textarea {
     }
 }
 
+@media screen and (max-width: 1100px) {
+    .info-container {
+        margin: 35px !important;
+        padding: 30px !important;
+    }
+}
 
 @media screen and (max-width: 700px) {
     .info-container {
-        padding: 30px !important;
+        padding: 15px !important;
+        margin: 15px !important;
     }
 
     .slogan-container {
@@ -618,7 +625,8 @@ textarea {
 
 @media screen and (max-width: 600px) {
     .info-container {
-        padding: 15px !important;
+        padding: 10px !important;
+        margin: 10px !important;
     }
 }
 
@@ -631,7 +639,7 @@ textarea {
     margin: 50px 0;
     border-radius: 8px;
     /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
     /* Slight shadow for depth */
 }
 
@@ -717,6 +725,15 @@ textarea {
     margin: 30px 0;
 }
 
+@media screen and (max-width: 800px) {
+    .about-title{
+        font-size: 30px !important;
+    }
+    .about-text{
+        font-size: 20px !important;
+    }
+}
+
 /* Responsive Grid Layout */
 .about-grid {
     display: flex;
@@ -731,7 +748,7 @@ textarea {
     height: 300px;
     background: linear-gradient(to bottom, #fff, #f9f9f9);
     border-radius: 15px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
     border: 1px solid #ddd;
     display: flex;
     flex-direction: column;
@@ -745,7 +762,7 @@ textarea {
 /* Hover Effect */
 .about-card:hover {
     transform: translateY(-1px);
-    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.15);
+    box-shadow: rgba(14, 63, 126, 0.06) 0px 0px 0px 1px, rgba(42, 51, 70, 0.03) 0px 1px 1px -0.5px, rgba(42, 51, 70, 0.04) 0px 2px 2px -1px, rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px, rgba(42, 51, 70, 0.03) 0px 5px 5px -2.5px, rgba(42, 51, 70, 0.03) 0px 10px 10px -5px, rgba(42, 51, 70, 0.03) 0px 24px 24px -8px;
 }
 
 /* Icons */
@@ -783,6 +800,11 @@ textarea {
     margin: 40px 0;
 }
 
+@media screen and (max-width: 1100px) {
+    .page-title-container{
+        margin: 0 0 30px 0 !important;
+    }
+}
 @media screen and (max-width: 1000px) {
     .page-title-container p {
         font-size: 2.2rem !important;
@@ -793,6 +815,25 @@ textarea {
     }
 }
 
+@media screen and (max-width: 800px) {
+    .congregation-container{
+        padding: 0 !important;
+    }
+
+    .congregationTitle{
+        font-size: 20px !important;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .congregationContent{
+        padding: 15px 10px !important;
+    }
+
+    .page-title-container p{
+        font-size: 2rem !important;
+    }
+}
 .page-title-container p {
     font-size: 3rem;
     color: #A50213;
@@ -826,7 +867,7 @@ textarea {
     transition: all 0.2s ease-in-out;
 }
 
-.congregationTitle:hover{
+.congregationTitle:hover {
     color: #A50213;
     border-color: #A50213;
 }
@@ -867,7 +908,7 @@ textarea {
     transform: rotate(180deg);
 }
 
-.open .congregationTitle{
+.open .congregationTitle {
     color: #A50213;
     border-color: #A50213;
 }
@@ -1010,7 +1051,7 @@ textarea {
 
 /* Filter Section */
 .filter-section {
-    display: flex;
+    display: flex; /* Ensures it stays visible on large screens */
     justify-content: space-between;
     align-items: center;
     background: white;
@@ -1018,6 +1059,7 @@ textarea {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     margin-bottom: 20px;
+    box-sizing: border-box !important;
 }
 
 .filter-group {
@@ -1026,40 +1068,50 @@ textarea {
     direction: rtl;
 }
 
-.filter-input {
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 14px;
-}
+
 
 .filter-btn {
     background: #A50213;
     color: white;
     border: none;
-    padding: 10px 15px;
+    padding: 8px 12px; /* Reduced padding */
     border-radius: 5px;
     cursor: pointer;
+    font-size: 14px; /* Reduced font size */
+    min-width: 80px; /* Ensures uniform button size */
 }
 
 .filter-btn:hover {
     background: #82020E;
 }
 
+
+
+
+/* Priests Section */
+.priests-section {
+    width: 100%;
+    padding: 20px 0 40px;
+    box-sizing: border-box;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
 /* Category Toggle */
 .category-toggle {
     display: flex;
+    justify-content: center;
     gap: 10px;
-    direction: rtl;
+    margin-bottom: 10px;
 }
 
 .toggle-btn {
-    padding: 10px 15px;
-    border: 1px solid #A50213;
-    background: white;
-    color: #A50213;
+    padding: 8px 14px;
+    background: #ddd;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
-    border-radius: 15px;
+    font-size: 14px;
+    direction: rtl;
 }
 
 .toggle-btn.active {
@@ -1067,39 +1119,71 @@ textarea {
     color: white;
 }
 
-/* Sorting Buttons */
-.filter-buttons {
-    display: flex;
-    justify-content: center;
-    direction: rtl;
+/* Filter Section */
+.filter-section {
+    background: #f8f8f8;
+    padding: 15px;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+/* Search Dropdown (Mobile) */
+.search-container {
+    display: none;
+    flex-direction: column;
     gap: 10px;
-    margin-bottom: 20px;
 }
 
-.filter-buttons .filter-btn {
-    background: #f1f1f1;
-    color: #333;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.filter-buttons .filter-btn.active {
+.search-dropdown-btn {
+    display: none; /* Hidden by default, only shown on mobile */
+    padding: 8px 14px;
     background: #A50213;
     color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+}
+
+/* Filter Inputs */
+
+.filter-input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Filter Buttons */
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* Search & Clear Buttons */
+.filter-buttons .filter-btn {
+    flex: 1;
+    padding: 8px 14px;
+    background: #A50213;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s;
+    max-width: 200px;
+}
+
+.filter-btn:hover {
+    background: #82020E;
 }
 
 /* Priests Grid */
-
-.priests-section {
-    width: 100%;
-    height: auto;
-    padding: 20px 0 40px;
-    box-sizing: border-box;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
-}
-
 .priests-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -1108,6 +1192,7 @@ textarea {
     direction: rtl;
 }
 
+/* Priest Card */
 .priest-card {
     background: white;
     padding: 15px;
@@ -1115,15 +1200,21 @@ textarea {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     cursor: pointer;
+    transition: transform 0.2s ease-in-out;
 }
 
+.priest-card:hover {
+    transform: translateY(-1px);
+}
+
+/* Priest Image */
 .priest-img {
     width: 100%;
     height: auto;
     border-radius: 5px;
 }
 
-
+/* Priest Name */
 .priest-name {
     font-size: 18px;
     margin-top: 10px;
@@ -1140,6 +1231,7 @@ textarea {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 16px;
 }
 
 .load-more-btn:hover {
@@ -1147,16 +1239,72 @@ textarea {
 }
 
 
+
+/* Mobile View */
+@media (max-width: 768px) {
+    /* Hide filter section by default */
+    .filter-section {
+        display: none;
+        flex-direction: column;
+    }
+
+    .search-dropdown-btn {
+        display: block;
+        width: 100%;
+        padding: 8px 16px;
+        background: #A50213;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-bottom: 10px;
+    }
+
+    .filter-group {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .filter-input, .filter-btn {
+        width: 100%;
+    }
+
+    .priests-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .priests-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .load-more-btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+
 /*centers style */
 /* Centers Section */
 .centers-section {
     text-align: center;
-    padding: 50px 20px;
+    padding: 0 20px;
 }
+
+@media screen and (max-width: 600px) {
+    .slogan-container {
+        margin-top: 0;
+    }
+}
+
+
 
 @media screen and (max-width: 800px) {
     .centers-section {
-        padding: 20px !important;
+        padding: 0 10px !important;
     }
 
     .section-title {
@@ -1274,6 +1422,20 @@ textarea {
     margin: 0 auto;
 }
 
+@media screen and (max-width: 1050px) {
+    .container-imageSlider2{
+        padding: 20px !important;
+        box-sizing: border-box;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .container-imageSlider2{
+        padding: 10px !important;
+        box-sizing: border-box;
+    }
+}
+
 .slider-for {
     width: 100%;
     margin-bottom: 20px;
@@ -1343,6 +1505,14 @@ textarea {
     text-align: center;
     background-color: #fff;
     direction: rtl;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 800px) {
+    .contact-container a, li{
+        font-size: 16px !important;
+    }
+
 }
 
 .contact-container h2 {
