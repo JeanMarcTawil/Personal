@@ -38,10 +38,21 @@ function toggleContentById(contentId) {
     const content = document.getElementById(contentId);
     
     if (content) {
-        // Toggle the 'open' class to show/hide the content
+        const allTitles = document.querySelectorAll(".congregationTitle");
+        
+        // Remove sticky from all titles
+        allTitles.forEach(title => title.classList.remove("sticky"));
+
+        // Toggle the 'open' class
         content.classList.toggle("open");
+
+        // If opened, make the title sticky
+        if (content.classList.contains("open")) {
+            content.querySelector(".congregationTitle").classList.add("sticky");
+        }
     }
 }
+
 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -61,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let logo = document.querySelector("#imgML-Logo img");
         if (window.innerWidth < 600) {
             logo.src = "Images/LogoAR - Copy.png";
-            document.getElementById('imgML-Logo').style.maxWidth = "50px";  
+            document.getElementById('imgML-Logo').style.maxWidth = "45px";  
         } else {
             logo.src = "Images/LogoAR.png";
             document.getElementById('imgML-Logo').style.maxWidth = "250px"; 
@@ -70,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let logoFooter = document.querySelector("#imgML-Logo-footer img");
         if (window.innerWidth < 600) {
             logoFooter.src = "Images/LogoAR - Copy.png";
-            document.getElementById('imgML-Logo-footer').style.maxWidth = "50px";  
+            document.getElementById('imgML-Logo-footer').style.maxWidth = "45px";  
         } else {
             logoFooter.src = "Images/LogoAR.png";
             document.getElementById('imgML-Logo-footer').style.maxWidth = "250px"; 
