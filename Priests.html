@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جمعيّة المرسلين اللبنانيّين الموارنة</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="icon" type="image/png" href="Images/LogoAR - Copy.png">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div id="imgML-Logo">
+            <img src="Images/LogoAR.png" alt="MLML-Logo">
+        </div>
+
+        <div id="headerChild">
+            <a target="_blank" href="https://wa.me/9613937983"><i class="fa-brands fa-whatsapp"></i></a>
+            <a target="_blank" href="https://www.instagram.com/kreimist?igsh=a205aHhjbTJtNGRt"><i
+                    class="fa-brands fa-instagram"></i></a>
+            <a target="_blank" href="https://www.facebook.com/share/1JCS9UiMUS/"><i style="font-size: 25px;"
+                    class="fa-brands fa-facebook"></i></a>
+        </div>
+
+        <div class="menu-icon" onclick="toggleNav()"><svg viewBox="0 0 24 24" fill="#A50213"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M19.5 8.25H4.5V6.75H19.5V8.25Z" fill="#A50213" />
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M19.5 12.75H4.5V11.25H19.5V12.75Z" fill="#A50213" />
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M19.5 17.25H4.5V15.75H19.5V17.25Z" fill="#A50213" />
+            </svg></div>
+    </header>
+
+    <div class="overlay" id="overlay" onclick="toggleNav()"></div>
+    <nav>
+        <div class="nav-content-container">
+            <a href="index.html">الرئيسية</a>
+            <a href="Congregations.html">الجمعية والتأسيس</a>
+            <a href="GeneralSuperior.html">الأب العام</a>
+            <a href="Priests.html">أبناء الجمعية</a>
+            <a href="Centers.html">المراكز والمؤسسات</a>
+            <a href="#">العائلات الكريمية</a>
+            <a href="#">رياضات ومواعظ</a>
+        </div>
+
+
+
+    </nav>
+
+    <div class="side-nav" id="sideNav">
+        <button class="close-btn" onclick="toggleNav()"><svg viewBox="0 0 24 24" version="1.1"
+                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <title>Close</title>
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="Close">
+                        <rect id="Rectangle" fill-rule="nonzero" x="0" y="0" width="24" height="24">
+
+                        </rect>
+                        <line x1="16.9999" y1="7" x2="7.00001" y2="16.9999" id="Path" stroke="#A50213" stroke-width="2"
+                            stroke-linecap="round">
+
+                        </line>
+                        <line x1="7.00006" y1="7" x2="17" y2="16.9999" id="Path" stroke="#A50213" stroke-width="2"
+                            stroke-linecap="round">
+
+                        </line>
+                    </g>
+                </g>
+            </svg></button>
+        <ul class="nav-links">
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="Congregations.html ">الجمعية والتأسيس</a></li>
+            <li><a href="GeneralSuperior.html">الأب العام</a></li>
+            <li><a href="Priests.html">أبناء الجمعية</a></li>
+            <li><a href="Centers.html">المراكز والمؤسسات</a></li>
+            <li><a href="#">العائلات الكريمية</a></li>
+            <li><a href="#">رياضات ومواعظ</a></li>
+        </ul>
+        <div class="nav-social-media">
+            <a href="https://wa.me/9613937983" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/kreimist?igsh=a205aHhjbTJtNGRt" target="_blank"><i
+                    class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/share/1JCS9UiMUS/" target="_blank"><i style="font-size: 21px;"
+                    class="fa-brands fa-facebook"></i></a>
+        </div>
+    </div>
+
+
+
+    <section class="priests-section">
+        <div class="container">
+
+            <!-- Category Toggle Above Search -->
+            <div class="category-toggle">
+                <button class="toggle-btn active" data-category="alive">الأحياء</button>
+                <button class="toggle-btn" data-category="deceased">الراقدون</button>
+            </div>
+
+            <!-- Search Dropdown Button (Only Visible on Mobile) -->
+            <button class="search-dropdown-btn">إظهار البحث</button>
+
+            <!-- Search & Filter Section (Hidden by Default on Mobile) -->
+            <div class="filter-section">
+                <div class="filter-group">
+                    <input type="text" placeholder="الاسم" class="filter-input">
+                    <input type="text" placeholder="الشهرة" class="filter-input">
+                </div>
+                <div class="filter-buttons">
+                    <button class="filter-btn search-btn">بحث <i class="fa fa-search"></i></button>
+                    <button class="filter-btn clear-btn">مسح <i class="fa fa-times"></i></button>
+                </div>
+            </div>
+
+            <!-- Sorting Buttons (Kept as in Original) -->
+            <div class="filter-buttons" id="filterButtons">
+                <button class="filter-btn active" data-sort="name">الاسم</button>
+                <button class="filter-btn" data-sort="first-vows">تاريخ النذور الأول</button>
+                <button class="filter-btn" data-sort="birth-date">تاريخ الولادة</button>
+                <button class="filter-btn" data-sort="ordination-date">تاريخ السيامة الكهنوتية</button>
+            </div>
+
+            <!-- Priests Grid -->
+            <div class="priests-grid">
+                <div class="priest-card">
+                    <img src="Images/generalSuperior.jpg" alt="مارون مبارك" class="priest-img">
+                    <div class="priest-info">
+                        <h3 class="priest-name">مارون مبارك</h3>
+                    </div>
+                </div>
+            </div>
+
+            <button class="load-more-btn">عرض المزيد</button>
+
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+    <!-- Contact Section
+    <section class="contact-section">
+        <div class="contact-container">
+            <h2>أرسل لنا رسالة</h2>
+            <p>إذا كان لديك أي استفسار أو تحتاج إلى مساعدة، لا تتردد في إرسال رسالة لنا.</p>
+
+            <form action="#" method="POST" class="contact-form">
+                <input type="text" name="name" placeholder="اسمك" required>
+                <input type="email" name="email" placeholder="بريدك الإلكتروني" required>
+                <input type="tel" name="subject" placeholder=" رقم الهاتف" required>
+                <textarea name="message" rows="5" placeholder="اكتب رسالتك" required></textarea>
+                <button type="submit">إرسال</button>
+            </form>
+        </div>
+    </section> -->
+
+    <footer class="modern-footer">
+        <div class="footer-top">
+            <div id="imgML-Logo-footer">
+                <img src="Images/LogoAR.png" alt="MLML-Logo">
+            </div>
+            <div class="footer-social">
+                <a href="https://www.facebook.com/share/1JCS9UiMUS/" class="social-icon" target="_blank"><i
+                        style="font-size: 25px;" class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/kreimist?igsh=a205aHhjbTJtNGRt" class="social-icon"
+                    target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://wa.me/9613937983" class="social-icon" target="_blank"><i
+                        class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>تواصل معنا</h3>
+                <p>راسلنا عبر البريد الإلكتروني</p>
+                <a href="mailto:kreimists@outlook.com">kreimists@outlook.com</a>
+                <a href="mailto:generalat1865@gmail.com">generalat1865@gmail.com</a>
+            </div>
+            <div class="footer-section">
+                <h3>اتصل بنا</h3>
+                <p>متاح من الاثنين إلى الجمعة ، من 8 صباحًا حتى 5 مساءً</p>
+                <a href="tel:+9619936370">+961 9 936 370</a>
+                <a href="tel:+9619936371">+961 9 936 371</a>
+                <a href="tel:+9619645312">+961 9 645 312</a>
+                <a href="tel:+9619934865">+961 9 934 865</a>
+                <a href="tel:+9619910931">+961 9 910 931</a>
+                <a href="tel:+9613612778">+961 3 612 778</a>
+            </div>
+            <div class="footer-section">
+                <h3>موقعنا</h3>
+                <p>لبنان، جونية، شارع الأب بطرس شلهوب، دير مار يوحنّا الحبيب</p>
+                <a target="_blank"
+                    href="https://www.google.com/maps/place/%D8%AF%D9%8A%D8%B1+%D9%85%D8%A7%D8%B1+%D9%8A%D9%88%D8%AD%D9%86%D8%A7+%D8%A7%D9%84%D8%AD%D8%A8%D9%8A%D8%A8+-+%D8%A7%D9%84%D8%B1%D8%A6%D8%A7%D8%B3%D8%A9+%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%A9%E2%80%AD/@33.9824838,35.6321067,19z/data=!4m5!3m4!1s0x151f41f905fdb4d1:0x94689bab0875c404!8m2!3d33.982593!4d35.631829?shorturl=1"
+                    style="font-size: 30px;"><i class="fa-solid fa-location-dot"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 جميع الحقوق محفوظة لجمعيّة المرسلين اللبنانيّين الموارنة</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            gsap.from(".category-toggle, .search-dropdown-btn, .filter-section, #filterButtons, .priests-grid, .load-more-btn, footer", {
+                opacity: 0,
+                y: 50,
+                duration: 1,
+                stagger: 0.2, // Delays between animations
+                ease: "power2.out"
+            });
+        });
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+
+</body>
+
+</html>
