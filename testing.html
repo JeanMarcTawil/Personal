@@ -15,6 +15,11 @@
     <!-- Slick Slider CSS -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
 
     <link rel="icon" type="image/png" href="Images/LogoAR - Copy.png">
     <link rel="stylesheet" href="styles.css">
@@ -99,11 +104,11 @@
 
 
 
-    <div class="main-title-container">
+    <div class="main-title-container" data-aos="fade-up">
         دير المخلص - الكريم
     </div>
 
-    <div class="container-imageSlider2">
+    <div class="container-imageSlider2" data-aos="zoom-in">
         <div class="slider-for">
             <div><img src="Images/CNTR_IMG_2_6_20211124064607ghosta.jpg" alt="Image 1"></div>
             <div><img src="Images/CNTR_IMG_2_7_20211124064622ghosta.jpg" alt="Image 2"></div>
@@ -264,10 +269,65 @@
             });
         });
 
+    </script>
 
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
 
+        gsap.to(".center-description-main-container", {
+            opacity: 1,
+            y: 0, // Move back to normal position
+            duration: 1,
+            ease: "power2.out",
+            scrollTrigger: {
+                trigger: ".center-description-main-container",
+                start: "top 90%", // Start animation when footer is 90% into view
+                toggleActions: "play none none none" // Run once
+            }
+        });
 
+        gsap.to(".contact-container", {
+            opacity: 1,
+            y: 0, // Move back to normal position
+            duration: 1,
+            ease: "power2.out",
+            scrollTrigger: {
+                trigger: ".contact-container",
+                start: "top 90%", // Start animation when footer is 90% into view
+                toggleActions: "play none none none" // Run once
+            }
+        });
 
+        gsap.to(".modern-footer", {
+            opacity: 1,
+            y: 0, // Move back to normal position
+            duration: 1,
+            ease: "power2.out",
+            scrollTrigger: {
+                trigger: ".modern-footer",
+                start: "top 90%", // Start animation when footer is 90% into view
+                toggleActions: "play none none none" // Run once
+            }
+        });
+
+        gsap.to(".footer-section", {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            stagger: 0.2, // Delay each element by 0.3s
+            ease: "power2.out",
+            scrollTrigger: {
+                trigger: ".modern-footer",
+                start: "top 85%",
+                toggleActions: "play none none none"
+            }
+        });
+
+        AOS.init({
+            duration: 800, // Animation duration (in milliseconds)
+            easing: 'ease-out', // Smooth animation effect
+            once: true, // Ensures animation happens only once
+        });
 
     </script>
 
