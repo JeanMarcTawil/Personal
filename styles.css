@@ -12,7 +12,16 @@ html {
     overflow-x: hidden;
 }
 
-button {
+body {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+body.loaded {
+    opacity: 1;
+}
+
+button, a {
     font-family: 'Tajawal', sans-serif;
 }
 
@@ -457,6 +466,9 @@ body.no-scroll {
     text-align: center;
     padding: 40px 20px 10px 20px;
     font-family: 'Tajawal', sans-serif;
+    opacity: 0; /* Start hidden */
+    transform: translateY(50px); /* Move down initially */
+
 }
 
 input[type="text"],
@@ -520,6 +532,8 @@ textarea {
     flex: 1;
     min-width: 250px;
     padding: 10px;
+    opacity: 0;
+    transform: translateY(30px);
 }
 
 .footer-section h3 {
@@ -569,6 +583,8 @@ textarea {
     width: 100%;
     max-width: 600px;
     margin: 0 auto;
+    opacity: 0;
+    transform: translateY(30px);
 }
 
 .contact-section h2 {
@@ -1523,6 +1539,8 @@ textarea {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: #f9f9f9;
+    opacity: 0;
+    transform: translateY(30px);
 }
 
 .center-description-container {
