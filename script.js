@@ -140,6 +140,8 @@ const observer = new IntersectionObserver((entries) => {
 elements.forEach(el => observer.observe(el));
 
 
+
+
 document.addEventListener("DOMContentLoaded", function () {
     const filterButtons = document.querySelectorAll(".filter-btn");
 
@@ -162,7 +164,6 @@ document.addEventListener("DOMContentLoaded", function () {
         button.addEventListener("touchstart", toggleActive, { passive: true });
     });
 });
-
 
 
 
