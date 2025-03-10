@@ -608,11 +608,10 @@ textarea {
 }
 
 .map-container {
-    width: 100%;
-    max-width: 400px; /* Adjust width as needed */
-    height: auto; /* Adjust height as needed */
-    margin-top: 10px;
-    border-radius: 8px; /* Optional: Rounds corners */
+    width: 160px;
+    /* max-width: 400px; Adjust width as needed */
+    height: 160px; /* Adjust height as needed */
+    border-radius: 50%; /* Optional: Rounds corners */
     overflow: hidden; /* Ensures rounded corners apply */
 }
 .map-container iframe {
