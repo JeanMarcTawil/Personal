@@ -143,22 +143,24 @@ elements.forEach(el => observer.observe(el));
 document.addEventListener("DOMContentLoaded", function () {
     const filterButtons = document.querySelectorAll(".filter-btn");
 
+    function toggleActive(event) {
+        event.preventDefault(); // Prevents unintended behavior on touch devices
+
+        if (this.classList.contains("active")) {
+            this.classList.remove("active");
+            return;
+        }
+
+        filterButtons.forEach(btn => btn.classList.remove("active"));
+        this.classList.add("active");
+    }
+
     filterButtons.forEach(button => {
-        button.addEventListener("click", function () {
-            // If the clicked button is already active, remove the class and return
-            if (this.classList.contains("active")) {
-                this.classList.remove("active");
-                return; // Stop execution here
-            }
-
-            // Remove the active class from all buttons
-            filterButtons.forEach(btn => btn.classList.remove("active"));
-
-            // Add active class to the clicked button
-            this.classList.add("active");
-        });
+        button.addEventListener("click", toggleActive);
+        button.addEventListener("touchstart", toggleActive, { passive: true }); // Adds support for touch
     });
 });
+
 
 
 
