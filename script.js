@@ -144,22 +144,25 @@ document.addEventListener("DOMContentLoaded", function () {
     const filterButtons = document.querySelectorAll(".filter-btn");
 
     function toggleActive(event) {
-        event.preventDefault(); // Prevents unintended behavior on touch devices
+        event.preventDefault(); // Prevent unintended behavior on touch devices
 
-        if (this.classList.contains("active")) {
-            this.classList.remove("active");
-            return;
-        }
+        // Toggle active class on the clicked button
+        this.classList.toggle("active");
 
-        filterButtons.forEach(btn => btn.classList.remove("active"));
-        this.classList.add("active");
+        // Remove active class from other buttons (except the clicked one)
+        filterButtons.forEach(btn => {
+            if (btn !== this) {
+                btn.classList.remove("active");
+            }
+        });
     }
 
     filterButtons.forEach(button => {
         button.addEventListener("click", toggleActive);
-        button.addEventListener("touchstart", toggleActive, { passive: true }); // Adds support for touch
+        button.addEventListener("touchstart", toggleActive, { passive: true });
     });
 });
+
 
 
 
