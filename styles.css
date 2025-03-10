@@ -1145,6 +1145,7 @@ textarea {
 @media screen and (max-width: 768px) {
     .details-section-content {
         flex-direction: column;
+        gap: 5px !important;
     }
 
     .section-content {
