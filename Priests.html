@@ -103,28 +103,32 @@
                 <button class="toggle-btn">الراقدون</button>
             </div>
 
-            <!-- Search Dropdown Button (Only Visible on Mobile) -->
-            <button class="search-dropdown-btn fade-in">إظهار البحث</button>
 
             <!-- Search & Filter Section (Hidden by Default on Mobile) -->
             <div class="filter-section fade-in">
-                <div class="filter-group">
-                    <input type="text" placeholder="الاسم" class="filter-input">
-                    <input type="text" placeholder="الشهرة" class="filter-input">
-                </div>
-                <div class="filter-buttons">
-                    <button class="search-button search-btn">بحث <i class="fa fa-search"></i></button>
-                    <button class="search-button clear-btn">مسح <i class="fa fa-times"></i></button>
+                <search class="search">
+                    <input class="search-input-sbb" type="search" id="search-input" placeholder="ابحث هنا ...">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        class="search-icon" fill="grey">
+                        <path
+                            d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z">
+                        </path>
+                    </svg>
+                </search>
+
+                <!-- Filter Dropdown Button -->
+                <div class="filter-dropdown">
+                    <button class="filter-btn" id="filterToggle"><span>فرز حسب</span>  <i class="fa-solid fa-sort"></i></button>
+                    <ul class="filter-list" id="filterList">
+                        <li data-sort="name">الاسم</li>
+                        <li data-sort="first-vows">تاريخ النذور الأول</li>
+                        <li data-sort="birth-date">تاريخ الولادة</li>
+                        <li data-sort="ordination-date">تاريخ السيامة الكهنوتية</li>
+                    </ul>
                 </div>
             </div>
 
-            <!-- Sorting Buttons (Kept as in Original) -->
-            <div class="filter-buttons fade-in" id="filterButtons">
-                <button class="filter-btn" data-sort="name">الاسم</button>
-                <button class="filter-btn" data-sort="first-vows">تاريخ النذور الأول</button>
-                <button class="filter-btn" data-sort="birth-date">تاريخ الولادة</button>
-                <button class="filter-btn" data-sort="ordination-date">تاريخ السيامة الكهنوتية</button>
-            </div>
+
 
             <!-- Priests Grid -->
             <div class="priests-grid">
@@ -232,7 +236,7 @@
     </footer>
 
 
-    
+
     <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
 
