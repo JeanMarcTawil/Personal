@@ -13,13 +13,13 @@ html {
 }
 
 body {
-    opacity: 1;
+    opacity: 0;
     transition: opacity 0.3s ease-in-out;
 }
 
-/* body.loaded {
+body.loaded {
     opacity: 1;
-} */
+}
 
 button,
 a {
